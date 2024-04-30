@@ -1,0 +1,8 @@
+// Specific scss file for about content
+
+.about {
+    margin: auto 100px;
+    @media (max-width: 999.98px) {
+        margin:auto 20px;
+    }
+}

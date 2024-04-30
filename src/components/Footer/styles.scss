@@ -1,0 +1,31 @@
+// Specific scss file for footer
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 66px 100px 19px;
+    background-color: #000;
+    color: #fff;
+    @media (max-width: 768.98px) {
+        margin-top: 26px;
+        padding: 66px 20px 58px;
+    }
+
+    &__text {
+        width: 513px;
+        height: 46px;
+        margin-top: 28.56px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34.22px;
+        text-align: center;
+      
+        @media (max-width: 768.98px) {
+          width: 133.59px;
+          font-size: 12px;
+          line-height: 17.11px;
+        }
+    }
+}
