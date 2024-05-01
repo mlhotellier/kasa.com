@@ -8,10 +8,7 @@ import RentalDetails from './pages/RentalDetails'
 import Error from './pages/Error'
 import Footer from './components/Footer'
 import data from './datas/logements.json'
-import './styles/styles.scss'
-
-// See datas
-// console.log(data)
+import './utils/styles.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

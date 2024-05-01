@@ -1,5 +1,6 @@
-import starDefault from '../assets/star-default.svg'
-import starActive from '../assets/star-active.svg'
+import starDefault from '../../assets/star-default.svg'
+import starActive from '../../assets/star-active.svg'
+import './styles.scss'
 
 function StarRating({ rating }) {
   const stars = []
@@ -12,6 +13,6 @@ function StarRating({ rating }) {
       />
     )
   }
-  return <div>{stars}</div>
+  return <div className="rating">{stars}</div>
 }
 export default StarRating

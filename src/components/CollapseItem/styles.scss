@@ -1,0 +1,25 @@
+// Specific scss file for collapse item
+@import '../../utils/styles.scss';
+
+.item {
+    margin: 30px auto;
+    &__head {
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: $redkasa;
+        color: $white;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 10px 15px 8px;;
+    }
+    &__head--title{
+        font-size:24px;
+    }
+    &__content {
+        background: $backgroundLight;
+        padding: 25px 20px 20px;
+        font-size: 18px;
+        margin-top: -5px;
+    }
+}

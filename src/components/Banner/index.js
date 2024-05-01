@@ -1,25 +1,18 @@
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import ImgForBanner from '../../assets/seaside.png'
+import DefaultForBanner from '../../assets/seaside.png'
 import './styles.scss'
 
-const BannerElement = styled.div`
-  background: no-repeat url(${(props) => props.$background});
-  background-size: cover;
-  background-position: center;
-`
-
-function Banner({ title = '', background = ImgForBanner }) {
+function Banner({ title = '', background = DefaultForBanner }) {
   return (
-    <BannerElement className="banner" $background={background}>
+    <div className="banner" style={{ backgroundImage: `url(${background})` }}>
       <h2 className="banner__title">{title}</h2>
-    </BannerElement>
+    </div>
   )
 }
 
 Banner.propTypes = {
-  title: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  background: PropTypes.string,
 }
 
 export default Banner

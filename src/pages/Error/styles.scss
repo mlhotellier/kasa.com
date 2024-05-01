@@ -1,8 +1,49 @@
 // Specific scss file for 404 content
+@import '../../utils/styles.scss';
 
 .error {
     margin: auto 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $redkasa;
+    text-align: center;
     @media (max-width: 999.98px) {
         margin:auto 20px;
+    }
+    &__title{
+        font-size: 288px;
+        font-weight: 700;
+        margin:94px auto 0;
+        @media (max-width: $mobile) {
+            font-size: 96px;
+            margin:87px auto 0;
+        }
+    }
+    &__text{
+        font-size: 36px;
+        font-weight: 500;
+        margin:139px auto;
+        @media (max-width: $mobile) {
+            font-size:18px;
+            margin:113px auto;
+        }
+
+        &--mobile {
+            display: none;
+            @media (max-width: $mobile) {
+                display: flex;
+            }
+        }
+    }
+    &__link {
+        margin: 0 auto 89px;
+        color: $black;
+        &:hover{
+            color: $redkasa;
+        }
+        @media (max-width: $mobile) {
+            margin: 0 auto 87px;
+        }
     }
 }

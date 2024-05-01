@@ -1,59 +1,72 @@
 import { useParams } from 'react-router-dom'
-import color from '../../styles/color'
-import StarRating from '../../components/StarRating'
+import Slideshow from '../../components/Slideshow'
+import Rating from '../../components/Rating'
 import CollaspeItem from '../../components/CollapseItem'
 import Error from '../Error'
+import './styles.scss'
 
 function RentalDetails({ data }) {
   const { id } = useParams()
-
   const rentalSelected = data.find((rental) => rental.id === id)
-  // See datas
+
   console.log(rentalSelected)
 
   if (!rentalSelected) {
-    // Si aucun logement n'est trouvé pour l'ID spécifié, affichez un message d'erreur ou redirigez l'utilisateur
+    // If no rental is found for the specified id, redirect to 404 page.
     return <Error />
   }
 
+  const listEquipment = (
+    <ul>
+      {rentalSelected.equipments.map((equipment, index) => (
+        <li key={index}>{equipment}</li>
+      ))}
+    </ul>
+  )
+
   return (
-    <section>
-      <img
-        src={rentalSelected.cover}
-        style={{ width: '100%', height: 450, objectFit: 'cover' }}
-        alt=""
-      />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div>
-          <h1 style={{ color: `${color.primary}` }}>{rentalSelected.title}</h1>
-          <span>{rentalSelected.location}</span>
+    <section className="rental">
+      <Slideshow rentalSelected={rentalSelected} />
+      <div className="rental__details">
+        <div className="rental__details__main">
+          <h1 className="rental__details__main--title">
+            {rentalSelected.title}
+          </h1>
+          <span className="rental__details__main--location">
+            {rentalSelected.location}
+          </span>
+          <div
+            className="rental__details__main__tags"
+            style={{ display: 'flex' }}
+          >
+            {rentalSelected.tags.map((tag, index) => (
+              <div key={index} className="rental__details__main__tags--tag">
+                {tag}
+              </div>
+            ))}
+          </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <p>{rentalSelected.host.name}</p>
-          <img
-            style={{ width: 64, height: 64, borderRadius: '50%' }}
-            src={rentalSelected.host.picture}
-            alt={`Profil de ${rentalSelected.host.name}`}
-          />
+        <div className="rental__details__host">
+          <div className="rental__details__host__about">
+            <p className="rental__details__host__about--name">
+              {rentalSelected.host.name}
+            </p>
+            <img
+              className="rental__details__host__about--picture"
+              src={rentalSelected.host.picture}
+              alt={`Profil de ${rentalSelected.host.name}`}
+            />
+          </div>
+          <Rating rating={rentalSelected.rating} />
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex' }}>
-          {rentalSelected.tags.map((tag, index) => (
-            <div key={index}>{tag}</div>
-          ))}
-        </div>
-        <StarRating rating={rentalSelected.rating} />
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className="rental__collapse">
         <CollaspeItem
           title="Description"
           content={rentalSelected.description}
+          style={{ margin: 0 }}
         />
-        <CollaspeItem
-          title="Équipements"
-          content={rentalSelected.equipments.join(', ')}
-        />
+        <CollaspeItem title="Équipements" content={listEquipment} />
       </div>
     </section>
   )

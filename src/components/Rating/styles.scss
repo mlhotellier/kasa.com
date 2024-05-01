@@ -1,0 +1,7 @@
+// Specific scss file for rating component
+@import '../../utils/styles.scss';
+
+.rating {
+    display: flex;
+    justify-content:space-around;
+}

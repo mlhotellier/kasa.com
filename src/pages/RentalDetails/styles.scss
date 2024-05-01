@@ -1,0 +1,83 @@
+// Specific scss file for rental details content
+@import '../../utils/styles.scss';
+
+.rental {
+    margin: auto 100px;
+
+    @media (max-width: 999.98px) {
+        margin:auto 20px;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media (max-width:$mobile){
+            flex-direction: column;
+        }
+        &__main{
+
+            &--title {
+                color: $redkasa;
+                font-size: 36px;
+                font-weight: 500;
+            }
+            &--location {
+                font-size: 18px;
+            }
+            &__tags{
+                margin: 20px auto 21px;
+                &--tag {
+                    background-color: $redkasa;
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 14px;
+                    border-radius:10px;
+                    padding:3px 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        &__host{
+            display: flex;
+            flex-direction: column;
+            @media (max-width:$mobile){
+                flex-direction: row-reverse;
+            }
+            &__about{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 21px;
+                &--picture {
+                    width: 64px; 
+                    height: 64px; 
+                    border-radius: 50%
+                }
+                &--name { 
+                    color:$redkasa;
+                    margin-right: 10px;
+                    max-width: 94px;
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    &__collapse {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+    &__collapse > .item{
+        margin:0;
+        max-width: 582px;
+        width: calc(50% - 1%);
+    }
+
+}

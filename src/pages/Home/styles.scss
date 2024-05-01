@@ -1,4 +1,5 @@
 // Specific scss file for home content
+@import '../../utils/styles.scss';
 
 .home {
     margin: auto 100px;
@@ -8,74 +9,41 @@
 }
 
 .home__rental-wrapper {
-    background-color: #f6f6f6;
+    background-color: $backgroundLight;
     margin: 43px auto 0;
     border-radius: 25px;
-    padding: 56px 50px 43px;
-    @media (max-width: 768.98px) {
+    width:100%;
+    @media (max-width: $mobile) {
         margin: 22px 0px 27px;
-        padding:0;
         background-color: transparent;
     }
 
     &__rental-list {
         display: flex;
-        gap: 3.125rem 3.75rem;
+        gap: 50px 60px;
         justify-items: center;
         align-items: center;
         flex-wrap: wrap;
+        padding:56px 50px 43px;
         justify-content: space-around;
-        width: 100%;
-        @media (max-width: 768.98px) {
+        width: initial;
+        @media (max-width: $mobile) {
             flex-direction: column;
             gap: 20px;
+            padding:0;
         }
 
         &__link {
-            width: 20%;
-            @media (max-width:1720px){
-            width: 28%;
+            width: calc(25% - 100px); 
+            @media (max-width:1540px) {
+                width: calc(33.333% - 100px);
             }
-            @media (max-width:1439px){
-                width:45%;
+            @media (max-width:1240px) {
+                width: calc(50% - 100px);
             }
-            @media (max-width:1120px){
-                width: 42%;
-            }
-            @media (max-width:919px){
+            @media (max-width: $mobile){
                 width: 100%;
             }
-         
-        }
-        
-        &__card {
-            border-radius: 10px;
-            background-position: center;
-            background-size: cover;
-            aspect-ratio: 1 / 1;
-            width:100%;
-            height:340px;
-            position:relative;
-            @media (max-width: 768.98px) {
-                height:255px;
-                aspect-ratio: unset;
-            }
-            &::before {
-                content: '';
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-                border-radius: inherit;
-                position:absolute;
-                width: 100%;
-                height:100%;
-            }
-
-            &__title {
-                position: absolute;
-                bottom:0;
-                margin:20px;
-                color: #fff;
-            }
-            
         }
     }
 }

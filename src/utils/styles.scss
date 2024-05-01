@@ -1,0 +1,23 @@
+// Supprimer styled components des dépendences si possible
+// scss file for project
+
+// Globals constants
+/** colors **/ 
+$redkasa: #FF6060;
+$white: #fff;
+$black: #000;
+$backgroundLight: #f6f6f6;
+$darken: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+/** media query **/
+$mobile : 768.98px;
+
+// Globals styles
+* {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+ul {
+  list-style-type:none;
+}

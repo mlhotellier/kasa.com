@@ -4,14 +4,11 @@ import ImgForBanner from '../../assets/mountain.png'
 import CollaspeItem from '../../components/CollapseItem'
 import aboutData from '../../datas/about.json'
 
-// See about datas
-console.log(aboutData)
-
 function About() {
   return (
     <section className="about">
-      <Banner title="" background={ImgForBanner} />
-      <div>
+      <Banner background={ImgForBanner} />
+      <div className="about__collapse">
         {aboutData.map((item, index) => (
           <CollaspeItem
             key={`${index}-${item.title}`}

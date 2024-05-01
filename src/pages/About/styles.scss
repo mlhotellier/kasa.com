@@ -5,4 +5,8 @@
     @media (max-width: 999.98px) {
         margin:auto 20px;
     }
+    &__collapse {
+        max-width: 1024px;
+        margin:auto;
+    }
 }

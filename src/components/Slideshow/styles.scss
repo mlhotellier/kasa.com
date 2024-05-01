@@ -1,0 +1,60 @@
+// Specific scss file for Slideshow component
+@import '../../utils/styles.scss';
+
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    width:100%;
+    min-height: 415px;
+    margin-bottom: 30px;
+        @media (max-width: $mobile) {
+            min-height: 255px;
+            margin-bottom: 15px;
+        }
+    &__navigation{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+        height: 100%;
+        align-items: center;
+        &--btn{
+            background: none;
+            border:none;
+        }
+        &--arrow{
+            width: 96px;
+            opacity: 87%;
+            cursor: pointer;
+            @media (max-width:$mobile){
+                width: 24px;
+            }
+        }
+        &--numbering{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            color:$white;
+            @media (max-width:$mobile){
+                display: none;
+            }
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 415px;
+        border-radius: 25px;
+        object-fit: cover;
+        display:none;
+        
+        @media (max-width: $mobile) {
+            height: 255px;
+            border-radius: 20px;
+        }
+    }
+    &__image.active {
+        display: flex;
+    }
+
+}
