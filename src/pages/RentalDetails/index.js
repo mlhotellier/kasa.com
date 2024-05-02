@@ -27,16 +27,15 @@ function RentalDetails({ data }) {
       <Slideshow rentalSelected={rentalSelected} />
       <div className="rental__details">
         <div className="rental__details__main">
-          <h1 className="rental__details__main--title">
-            {rentalSelected.title}
-          </h1>
-          <span className="rental__details__main--location">
-            {rentalSelected.location}
-          </span>
-          <div
-            className="rental__details__main__tags"
-            style={{ display: 'flex' }}
-          >
+          <div className="rental__details__main__group">
+            <h1 className="rental__details__main__group--title">
+              {rentalSelected.title}
+            </h1>
+            <span className="rental__details__main__group--location">
+              {rentalSelected.location}
+            </span>
+          </div>
+          <div className="rental__details__main__tags">
             {rentalSelected.tags.map((tag, index) => (
               <div key={index} className="rental__details__main__tags--tag">
                 {tag}
@@ -55,6 +54,7 @@ function RentalDetails({ data }) {
               alt={`Profil de ${rentalSelected.host.name}`}
             />
           </div>
+
           <Rating rating={rentalSelected.rating} />
         </div>
       </div>

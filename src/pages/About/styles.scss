@@ -1,12 +1,13 @@
 // Specific scss file for about content
+@import '../../utils/styles.scss';
 
 .about {
-    margin: auto 100px;
-    @media (max-width: 999.98px) {
-        margin:auto 20px;
-    }
-    &__collapse {
-        max-width: 1024px;
-        margin:auto;
-    }
+  margin: auto 100px;
+  @media (max-width: 999.98px) {
+    margin: auto 20px;
+  }
+  &__collapse {
+    max-width: 1023px;
+    margin: auto;
+  }
 }

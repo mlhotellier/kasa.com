@@ -2,96 +2,110 @@
 @import '../../utils/styles.scss';
 
 .rental {
-    margin: auto 100px;
+  margin: auto 100px;
 
-    @media (max-width: 999.98px) {
-        margin:auto 20px;
+  @media (max-width: 999.98px) {
+    margin: auto 20px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
     }
-
-    &__details {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        @media (max-width:$mobile){
-            flex-direction: column;
-        }
-        &__main{
-
-            &--title {
-                color: $redkasa;
-                font-size: 36px;
-                font-weight: 500;
-            }
-            &--location {
-                font-size: 18px;
-            }
-            &__tags{
-                margin: 20px auto 21px;
-                &--tag {
-                    background-color: $redkasa;
-                    color: $white;
-                    font-weight: 700;
-                    font-size: 14px;
-                    border-radius:10px;
-                    padding:3px 10px;
-                    margin-right: 10px;
-                }
-            }
-        }
-        &__host{
-            display: flex;
-            flex-direction: column;
-            @media (max-width:$mobile){
-                flex-direction: row-reverse;
-                justify-content: space-between;
-                margin-bottom: 13px;
-            }
-            &__about{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-end;
-                margin-bottom: 21px;
-                @media (max-width: $mobile){
-                    margin-bottom: 0px;
-                }
-                &--picture {
-                    width: 64px; 
-                    height: 64px; 
-                    border-radius: 50%
-                }
-                &--name { 
-                    color:$redkasa;
-                    margin-right: 10px;
-                    max-width: 94px;
-                    text-align: end;
-                }
-            }
-        }
-    }
-
-    &__collapse {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+    &__main {
+      margin-top: 6px;
+      @media (max-width: $mobile) {
+        margin: 0;
+        margin-bottom: 16px;
+      }
+      &__group {
+        height: 77px;
         @media (max-width: $mobile) {
-            flex-direction: column;
+          height: 73px;
         }
+        &--title {
+          color: $redkasa;
+          font-size: 36px;
+          font-weight: 500;
+          @media (max-width: $mobile) {
+            margin-bottom: 5px;
+          }
+        }
+        &--location {
+          font-size: 18px;
+        }
+      }
+      &__tags {
+        margin: 20px auto 0;
+        display: flex;
+        text-align: center;
+        @media (max-width: $mobile) {
+          margin-top: 10px;
+        }
+        &--tag {
+          background-color: $redkasa;
+          color: $white;
+          font-weight: 700;
+          height: 25px;
+          min-width: 115px;
+          box-sizing: border-box;
+          font-size: 14px;
+          border-radius: 10px;
+          padding: 3px 10px;
+          margin-right: 10px;
+          @media (max-width: $mobile) {
+            height: 18px;
+            min-width: 84px;
+            font-size: 10px;
+            border-radius: 5px;
+            padding: 2.16px 0px 1.84px;
+          }
+        }
+      }
     }
-    &__collapse > .item{
-        margin:0;
-        max-width: 582px;
-        width: calc(50% - 1%);
-        @media (max-width: $mobile){
-            width: 100%;
+    &__host {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 13px;
+      }
+      &__about {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 21px;
+        @media (max-width: $mobile) {
+          margin-bottom: 0px;
         }
-        &:first-child {
-            margin-bottom: 20px 
+        &--picture {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
         }
-        &:last-child {
-            margin-bottom: 1px 
+        &--name {
+          color: $redkasa;
+          margin-right: 10px;
+          max-width: 94px;
+          text-align: end;
+          line-height: 25.67px;
         }
+      }
     }
-
+  }
+  &__collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
 }

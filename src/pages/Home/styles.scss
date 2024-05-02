@@ -3,7 +3,7 @@
 
 .home {
     margin: auto 100px;
-    @media (max-width: 999.98px) {
+    @media (max-width: $mobile) {
         margin:auto 20px;
     }
 }
@@ -34,13 +34,7 @@
         }
 
         &__link {
-            width: calc(25% - 100px); 
-            @media (max-width:1540px) {
-                width: calc(33.333% - 100px);
-            }
-            @media (max-width:1240px) {
-                width: calc(50% - 100px);
-            }
+            width: auto;
             @media (max-width: $mobile){
                 width: 100%;
             }

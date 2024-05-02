@@ -7,10 +7,11 @@
     background-size: cover;
     aspect-ratio: 1 / 1;
     position:relative;
-    width:100%;
+    width:340px;
     @media (max-width: $mobile) {
         height:255px;
         aspect-ratio: unset;
+        width: 100%;
     }
     &::before {
         content: '';
@@ -27,7 +28,7 @@
             color: $redkasa;
         }
         &::before{
-            background: #ffffffd8;
+            background: $darken__hover;
         }
     }
     &__title {

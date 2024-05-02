@@ -9,6 +9,7 @@ import Error from './pages/Error'
 import Footer from './components/Footer'
 import data from './datas/logements.json'
 import './utils/styles.scss'
+import ScrollToTop from './components/ScrollToTop'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -22,6 +23,7 @@ root.render(
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </Router>
   </React.StrictMode>
 )

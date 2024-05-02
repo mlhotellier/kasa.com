@@ -2,24 +2,116 @@
 @import '../../utils/styles.scss';
 
 .item {
-    margin: 30px auto;
-    &__head {
+  &__head {
+    box-sizing: border-box;
+    height: 52px;
+    cursor: pointer;
+    background-color: $redkasa;
+    color: $white;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    &__arrow {
+      width: 24px;
+      width: 24px;
+      position: absolute;
+      right: 24px;
+      bottom: 17px;
+      @media (max-width: $mobile) {
+        width: 16px;
+        right: 12px;
+        bottom: 11.57px;
+      }
+      &--open {
+        transform: rotate(-180deg);
+        transition: transform 0.5s ease-out;
+      }
+      &--close {
+        transform: rotate(0deg);
+        transition: transform 0.5s ease-out;
+      }
+    }
+  }
+  &__content {
+    &--open {
+      font-size: 18px;
+      margin-top: -5px;
+      font-weight: 400;
+      max-height: 200px;
+      padding: 25px 20px 20px;
+      opacity: 1;
+      background: $backgroundLight;
+      transition: max-height 0.3s ease, padding ease;
+      @media (max-width: $mobile) {
+        font-size: 12px;
+        padding: 13px 20px 19px;
         border-radius: 5px;
-        cursor: pointer;
-        background-color: $redkasa;
-        color: $white;
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        padding: 10px 15px 8px;;
+      }
     }
-    &__head--title{
-        font-size:24px;
+    &--close {
+      max-height: 0px;
+      padding: 0px 20px;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity ease, padding 0.3s ease;
     }
-    &__content {
-        background: $backgroundLight;
-        padding: 25px 20px 20px;
-        font-size: 18px;
-        margin-top: -5px;
+  }
+}
+
+.about .item {
+  margin: 30px auto;
+  @media (max-width: $mobile) {
+    margin: 20px auto;
+    &:first-child {
+      margin-top: 0px;
     }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__head {
+    padding: 10px 15px 8px;
+    border-radius: 5px;
+    @media (max-width: $mobile) {
+      height: 30px;
+      padding: 10px;
+    }
+    &__title {
+      font-size: 24px;
+      @media (max-width: $mobile) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.rental .item {
+  margin: 0;
+  max-width: 582px;
+  width: calc(50% - 1%);
+  @media (max-width: $mobile) {
+    max-width: 100%;
+    width: 100%;
+  }
+  &__head {
+    padding: 10px;
+    border-radius: 10px;
+    @media (max-width: $mobile) {
+      height: 30px;
+    }
+    &__title {
+      font-size: 18px;
+      @media (max-width: $mobile) {
+        font-size: 13px;
+      }
+    }
+  }
+  @media (max-width: $mobile) {
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    &:last-child {
+      margin-bottom: 1px;
+    }
+  }
 }
