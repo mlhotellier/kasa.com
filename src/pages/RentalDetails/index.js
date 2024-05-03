@@ -9,6 +9,10 @@ function RentalDetails({ data }) {
   const { id } = useParams()
   const rentalSelected = data.find((rental) => rental.id === id)
 
+  const splitName = rentalSelected.host.name.split(' ')
+  const firstName = splitName[0]
+  const lastName = splitName[1]
+
   if (!rentalSelected) {
     // If no rental is found for the specified id, redirect to 404 page.
     return <Error />
@@ -45,9 +49,13 @@ function RentalDetails({ data }) {
         </div>
         <div className="rental__details__host">
           <div className="rental__details__host__about">
-            <p className="rental__details__host__about--name">
-              {rentalSelected.host.name}
-            </p>
+            <div className="rental__details__host__about__name">
+              <p className="rental__details__host__about__name--name">
+                {firstName}
+                <br />
+                {lastName}
+              </p>
+            </div>
             <img
               className="rental__details__host__about--picture"
               src={rentalSelected.host.picture}

@@ -19,6 +19,7 @@
     width: 100%;
     height: 100%;
     align-items: center;
+    z-index: 1;
     &--btn {
       background: none;
       border: none;
@@ -42,18 +43,35 @@
     }
   }
   &__image {
-    width: 100%;
-    height: 415px;
+    width: 0;
     border-radius: 25px;
     object-fit: cover;
-    display: none;
-
+    opacity: 0;
+    height: 0px;
+    // transform: translateX(-1250px);
     @media (max-width: $mobile) {
-      height: 255px;
+      height: 0px;
       border-radius: 20px;
     }
   }
   &__image.active {
-    display: flex;
+    opacity: 1;
+    height: 415px;
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 0.4s ease-in, transform 0.3s ease;
+    @media (max-width: $mobile) {
+      height: 255px;
+    }
+  }
+  &__image.next {
+    transform: translateX(-50%);
+    opacity: 0.2;
+  }
+
+  &__image.previous {
+    transform: translateX(50%);
+    opacity: 0.2;
   }
 }

@@ -44,16 +44,20 @@ function Slideshow({ rentalSelected }) {
           </p>
         </div>
       )}
-      {pictures.map((picture, index) => (
-        <img
-          key={`${rentalSelected.title}-${index}`}
-          src={picture}
-          alt={rentalSelected.title}
-          className={`slideshow__image ${
-            currentSlide === index ? 'active' : ''
-          }`}
-        />
-      ))}
+      <div className="slideshow__container">
+        {pictures.map((picture, index) => (
+          <img
+            key={`${rentalSelected.title}-${index}`}
+            src={picture}
+            alt={rentalSelected.title}
+            className={`slideshow__image ${
+              currentSlide === index ? 'active' : ''
+            } ${currentSlide === index - 1 ? 'previous' : ''} ${
+              currentSlide === index + 1 ? 'next' : ''
+            }`}
+          />
+        ))}
+      </div>
     </div>
   )
 }

@@ -8,9 +8,19 @@
   margin-top: 8px;
   &__img {
     height: 36px;
+    margin-left: 4px;
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
     @media (max-width: $mobile) {
       height: 18px;
       margin-right: 2px;
+      margin-left: 0;
+      @media (max-width: $mobile) {
+        &:nth-last-of-type() {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
