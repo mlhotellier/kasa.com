@@ -12,6 +12,7 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
     &__arrow {
       width: 24px;
       width: 24px;
@@ -25,11 +26,11 @@
       }
       &--open {
         transform: rotate(-180deg);
-        transition: transform 0.5s ease-out;
+        transition: transform 0.3s ease-out;
       }
       &--close {
         transform: rotate(0deg);
-        transition: transform 0.5s ease-out;
+        transition: transform 0.3s ease-out;
       }
     }
   }
@@ -45,7 +46,7 @@
       transition: max-height 0.3s ease, padding ease;
       @media (max-width: $mobile) {
         font-size: 12px;
-        padding: 13px 20px 19px;
+        padding: 18px 20px 19px;
         border-radius: 5px;
       }
     }
@@ -71,7 +72,6 @@
   }
   &__head {
     padding: 10px 15px 8px;
-    border-radius: 5px;
     @media (max-width: $mobile) {
       height: 30px;
       padding: 10px;
@@ -95,7 +95,6 @@
   }
   &__head {
     padding: 10px;
-    border-radius: 10px;
     @media (max-width: $mobile) {
       height: 30px;
     }

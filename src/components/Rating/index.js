@@ -10,6 +10,7 @@ function StarRating({ rating }) {
         key={i}
         src={i < rating ? starActive : starDefault}
         alt="icône étoile"
+        className="rating__img"
       />
     )
   }

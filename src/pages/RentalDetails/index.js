@@ -28,10 +28,10 @@ function RentalDetails({ data }) {
       <div className="rental__details">
         <div className="rental__details__main">
           <div className="rental__details__main__group">
-            <h1 className="rental__details__main__group--title">
+            <h1 className="rental__details__main__group__title">
               {rentalSelected.title}
             </h1>
-            <span className="rental__details__main__group--location">
+            <span className="rental__details__main__group__location">
               {rentalSelected.location}
             </span>
           </div>

@@ -4,4 +4,13 @@
 .rating {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 7px;
+  margin-top: 8px;
+  &__img {
+    height: 36px;
+    @media (max-width: $mobile) {
+      height: 18px;
+      margin-right: 2px;
+    }
+  }
 }
