@@ -8,7 +8,7 @@ import RentalDetails from './pages/RentalDetails'
 import Error from './pages/Error'
 import Footer from './components/Footer'
 import data from './datas/logements.json'
-import './utils/styles.scss'
+import './utils/globals_styles.scss'
 import ScrollToTop from './components/ScrollToTop'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

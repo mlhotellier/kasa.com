@@ -1,5 +1,4 @@
-import arrowLeft from '../../assets/arrow_left.svg'
-import arrowRight from '../../assets/arrow_right.svg'
+import arrow from '../../assets/arrow_slider.svg'
 import { useState } from 'react'
 import './styles.scss'
 
@@ -24,18 +23,18 @@ function Slideshow({ rentalSelected }) {
         <div className="slideshow__navigation">
           <button
             onClick={previousSlide}
-            className="slideshow__navigation--btn"
+            className="slideshow__navigation__btn"
           >
             <img
-              src={arrowLeft}
-              className="slideshow__navigation--arrow"
+              src={arrow}
+              className="slideshow__navigation__btn__arrow"
               alt="Icone chevron vers la gauche pour la navigation"
             />
           </button>
-          <button className="slideshow__navigation--btn" onClick={nextSlide}>
+          <button className="slideshow__navigation__btn" onClick={nextSlide}>
             <img
-              src={arrowRight}
-              className="slideshow__navigation--arrow"
+              src={arrow}
+              className="slideshow__navigation__btn__arrow slideshow__navigation__btn__arrow--right"
               alt="Icone chevron vers la droite pour la navigation"
             />
           </button>

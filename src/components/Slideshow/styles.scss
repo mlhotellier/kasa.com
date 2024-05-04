@@ -1,5 +1,5 @@
 // Specific scss file for Slideshow component
-@import '../../utils/styles.scss';
+@import '../../utils/globals_styles.scss';
 
 .slideshow {
   display: flex;
@@ -20,16 +20,19 @@
     height: 100%;
     align-items: center;
     z-index: 1;
-    &--btn {
+    &__btn {
       background: none;
       border: none;
-    }
-    &--arrow {
-      width: 96px;
-      opacity: 87%;
-      cursor: pointer;
-      @media (max-width: $mobile) {
-        width: 24px;
+      &__arrow {
+        width: 96px;
+        opacity: 87%;
+        cursor: pointer;
+        @media (max-width: $mobile) {
+          width: 24px;
+        }
+      }
+      &__arrow--right {
+        transform: rotate(180deg);
       }
     }
     &--numbering {

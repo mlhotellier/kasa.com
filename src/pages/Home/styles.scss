@@ -1,47 +1,43 @@
 // Specific scss file for home content
-@import '../../utils/styles.scss';
+@import '../../utils/globals_styles.scss';
 
 .home {
-    margin: auto 100px;
-    @media (max-width: $mobile) {
-        margin:auto 20px;
-    }
+  margin: auto 100px;
+  @media (max-width: $mobile) {
+    margin: auto 20px;
+  }
 }
 
 .home__rental-wrapper {
-    background-color: $backgroundLight;
-    margin: 43px auto 0;
-    border-radius: 25px;
-    width:100%;
+  background-color: $backgroundLight;
+  margin: 43px auto 0;
+  border-radius: 25px;
+  width: 100%;
+  @media (max-width: $mobile) {
+    margin: 22px 0px 27px;
+    background-color: transparent;
+  }
+
+  &__rental-list {
+    display: flex;
+    gap: 50px 60px;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 56px 50px 43px;
+    justify-content: space-around;
+    width: initial;
     @media (max-width: $mobile) {
-        margin: 22px 0px 27px;
-        background-color: transparent;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
     }
 
-    &__rental-list {
-        display: flex;
-        gap: 50px 60px;
-        justify-items: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding:56px 50px 43px;
-        justify-content: space-around;
-        width: initial;
-        @media (max-width: $mobile) {
-            flex-direction: column;
-            gap: 20px;
-            padding:0;
-        }
-
-        &__link {
-            width: auto;
-            @media (max-width: $mobile){
-                width: 100%;
-            }
-        }
+    &__link {
+      width: auto;
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
     }
+  }
 }
-
-
-
-
