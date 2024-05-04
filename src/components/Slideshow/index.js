@@ -47,12 +47,20 @@ function Slideshow({ rentalSelected }) {
         {pictures.map((picture, index) => {
           let classNames = 'slideshow__container__image'
           if (currentSlide === index) classNames += ' active'
-          if (currentSlide === totalPictures - 1 && index === 0)
+          if (
+            (totalPictures > 1) & (currentSlide === totalPictures - 1) &&
+            index === 0
+          )
             classNames += ' next'
-          if (index === currentSlide + 1) classNames += ' next'
-          if (currentSlide === 0 && index === totalPictures - 1)
+          if ((totalPictures > 1) & (index === currentSlide + 1))
+            classNames += ' next'
+          if (
+            (totalPictures > 1) & (currentSlide === 0) &&
+            index === totalPictures - 1
+          )
             classNames += ' previous'
-          if (index === currentSlide - 1) classNames += ' previous'
+          if ((totalPictures > 1) & (index === currentSlide - 1))
+            classNames += ' previous'
 
           return (
             <img
