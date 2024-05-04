@@ -7,7 +7,7 @@ function Slideshow({ rentalSelected }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const totalPictures = rentalSelected.pictures.length
   const pictures = rentalSelected.pictures
-
+  console.log(currentSlide)
   function nextSlide() {
     const newSlide = currentSlide === totalPictures - 1 ? 0 : currentSlide + 1
     setCurrentSlide(newSlide)
@@ -45,18 +45,25 @@ function Slideshow({ rentalSelected }) {
         </div>
       )}
       <div className="slideshow__container">
-        {pictures.map((picture, index) => (
-          <img
-            key={`${rentalSelected.title}-${index}`}
-            src={picture}
-            alt={rentalSelected.title}
-            className={`slideshow__image ${
-              currentSlide === index ? 'active' : ''
-            } ${currentSlide === index - 1 ? 'previous' : ''} ${
-              currentSlide === index + 1 ? 'next' : ''
-            }`}
-          />
-        ))}
+        {pictures.map((picture, index) => {
+          let classNames = 'slideshow__container__image'
+          if (currentSlide === index) classNames += ' active'
+          if (currentSlide === totalPictures - 1 && index === 0)
+            classNames += ' next'
+          if (index === currentSlide + 1) classNames += ' next'
+          if (currentSlide === 0 && index === totalPictures - 1)
+            classNames += ' previous'
+          if (index === currentSlide - 1) classNames += ' previous'
+
+          return (
+            <img
+              key={`${rentalSelected.title}-${index}`}
+              src={picture}
+              alt={rentalSelected.title}
+              className={classNames}
+            />
+          )
+        })}
       </div>
     </div>
   )
