@@ -6,7 +6,7 @@ function Slideshow({ rentalSelected }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const totalPictures = rentalSelected.pictures.length
   const pictures = rentalSelected.pictures
-  console.log(currentSlide)
+
   function nextSlide() {
     const newSlide = currentSlide === totalPictures - 1 ? 0 : currentSlide + 1
     setCurrentSlide(newSlide)
