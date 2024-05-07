@@ -7,16 +7,17 @@ import './styles.scss'
 
 function RentalDetails({ data }) {
   const { id } = useParams()
-  const rentalSelected = data.find((rental) => rental.id === id)
 
-  const splitName = rentalSelected.host.name.split(' ')
-  const firstName = splitName[0]
-  const lastName = splitName[1]
+  const rentalSelected = data.find((rental) => rental.id === id)
 
   if (!rentalSelected) {
     // If no rental is found for the specified id, redirect to 404 page.
     return <Error />
   }
+
+  const splitName = rentalSelected.host.name.split(' ')
+  const firstName = splitName[0]
+  const lastName = splitName[1]
 
   const listEquipment = (
     <ul>
