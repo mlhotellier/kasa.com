@@ -46,6 +46,15 @@ La plateforme Kasa.com est une application en ligne destinée à faciliter la lo
 - Affiche une page d'erreur 404 en cas de URL invalide ou de location non trouvée.
 - Propose un lien de retour à la page d'accueil pour faciliter la navigation de l'utilisateur.
 
+### Header
+
+- Comporte le logo de l'entreprise et une barre de navigation permettant à l'utilisateur de passer de la page d'accueil à la page À propos (et inversement!).
+- Indique à l'utilisateur sur quelle page il se trouve grâce à un effet de style.
+
+### Footer
+
+- Affiche le logo de l'entreprise en blanc sur fond noir, ainsi qu'un texte indiquant les droits d'auteur.
+
 ### Scroll vers le haut (ScrollToTop)
 
 - Permet de faire défiler automatiquement la fenêtre vers le haut de la page à chaque fois que l'utilisateur navigue vers une nouvelle route dans l'application. Elle est implémentée à l'aide de React Hooks, notamment useEffect et useLocation fournis par React Router DOM.
