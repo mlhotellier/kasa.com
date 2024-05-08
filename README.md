@@ -1,6 +1,6 @@
 # Kasa - Plateforme de location d'appartements entre particuliers
 
-![Kasa Logo](https://github.com/mlhotellier/kasa.com/raw/main/1680512368252_Kasa%20logo.png)
+<img src="https://github.com/mlhotellier/kasa.com/raw/main/1680512368252_Kasa%20logo.png" alt="Kasa Logo" style="width: 100%;">
 
 Ce projet consiste en une refonte complète de la plateforme Kasa.com, l'un des leaders de la location d'appartements entre particuliers en France. L'objectif est de moderniser et d'optimiser l'expérience utilisateur en développant une nouvelle application avec React. Projet développé en tant que freelance.
 
