@@ -12,6 +12,13 @@
   @media (max-width: $mobile) {
     margin-top: 27px;
     padding: 66px 20px 58px;
+
+    /****************/
+    /** 2nd propal for footer if height of body < height of screen **/
+    /****************/
+    //position: absolute;
+    //bottom: 0;
+    //width: calc(100% - 40px);
   }
 
   &__text {
