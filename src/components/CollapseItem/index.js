@@ -10,7 +10,10 @@ function CollaspeItem({ title = '', content = '' }) {
   }
 
   return (
-    <div className="item" onClick={toggleOpen}>
+    <div
+      className="item"
+      //onClick={toggleOpen}
+    >
       <div className="item__head">
         <h3 className="item__head__title">{title}</h3>
         <img
@@ -19,6 +22,7 @@ function CollaspeItem({ title = '', content = '' }) {
           }`}
           src={arrow}
           alt="Icone chevron"
+          onClick={toggleOpen}
         />
       </div>
       <div className={`item__content${isOpen ? '--open' : '--close'}`}>
