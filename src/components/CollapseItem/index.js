@@ -12,7 +12,10 @@ function CollaspeItem({ title = '', content = '' }) {
   return (
     <div
       className="item"
-      //onClick={toggleOpen}
+      /****************/
+      /** 2nd propal for open CollapseItem if you clicked on all item **/
+      /****************/
+      //onClick={toggleOpen} // decomment this all line
     >
       <div className="item__head">
         <h3 className="item__head__title">{title}</h3>
@@ -22,6 +25,10 @@ function CollaspeItem({ title = '', content = '' }) {
           }`}
           src={arrow}
           alt="Icone chevron"
+          /****************/
+          /** 2nd propal for open CollapseItem if you clicked on all item **/
+          /****************/
+          // comment this all line (32)
           onClick={toggleOpen}
         />
       </div>
