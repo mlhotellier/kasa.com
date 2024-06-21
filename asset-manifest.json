@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/kasa.com.git/static/css/main.c0a098ff.css",
+    "main.js": "/kasa.com.git/static/js/main.34049fdd.js",
+    "static/media/mountain.png": "/kasa.com.git/static/media/mountain.dc7a08e1faa2e14de0bd.png",
+    "static/media/seaside.png": "/kasa.com.git/static/media/seaside.1168be13650bb18b456e.png",
+    "static/media/logo-kasa-white.svg": "/kasa.com.git/static/media/logo-kasa-white.a704cd7679e4c79056dcca5dc733d583.svg",
+    "static/media/logo-kasa.svg": "/kasa.com.git/static/media/logo-kasa.a5c76d8a1dac09edd59db36304e0bcfa.svg",
+    "index.html": "/kasa.com.git/index.html",
+    "static/media/star-active.svg": "/kasa.com.git/static/media/star-active.f47de1483d883b69c6210d622f75c05c.svg",
+    "static/media/star-default.svg": "/kasa.com.git/static/media/star-default.c864407432a61da616f95e669105d42e.svg",
+    "static/media/arrow.svg": "/kasa.com.git/static/media/arrow.1a3a1e56cd5bc2c20b20119a14e17dfb.svg",
+    "static/media/arrow_slider.svg": "/kasa.com.git/static/media/arrow_slider.f34259c0f018c52e881c7687e0e3ee73.svg",
+    "main.c0a098ff.css.map": "/kasa.com.git/static/css/main.c0a098ff.css.map",
+    "main.34049fdd.js.map": "/kasa.com.git/static/js/main.34049fdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0a098ff.css",
+    "static/js/main.34049fdd.js"
+  ]
+}
